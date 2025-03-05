@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous">
+  <title>Task List</title>
+  <style>
+
+    .rest{
+      background-color: green !important;
+    }
+
+    .add-color{
+      background-color: green !important;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" id="task">
+                  <label for="task" class="active">New Task</label>
+                </div>
+                <input type="submit" id="submit-btn" value="Add Task" class="btn purple addTask">
+                <input type="submit" id="submit-btn" value="Update Task" class="btn yellow darken-4 updateTask">
+                <!-- <button id="submit-btn" type="submit" class="btn purple">Add Task</button> -->
+              </form> 
+             
+            </div>
+          </div>
+          <div class="card-action">
+            <h5 class="test" id="task-title">
+              Tasks
+            </h5>
+              <!-- List Search start -->
+           <div class="col s12">
+              <div class="input-field ">
+                <input type="text" id="search">
+                <label for="search">Search</label>
+              </div>
+              <!-- <div class="col s3">
+                <button id="submit-search" type="submit" class="btn">Search</button>
+              </div> -->
+           </div>
+                <!-- List Search end -->
+            <ul class="collection">
+              <li class="collection-item">
+                List Item 1
+                <a href="#" class="delete-item secondary-content test" title="im Link">
+                  <i class="fa fa-remove"></i>
+                </a>
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-pencil edit"></i>
+                </a>
+              </li><!-- Hey im comment node -->
+              <li class="collection-item">
+                List Item 2
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+                <a href="#" class="edit-item secondary-content">
+                  <i class="fa fa-pencil edit"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item 3
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-pencil edit"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item 4
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-pencil edit"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item 5
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-pencil edit"></i>
+                </a>
+              </li>
+             </ul>
+            <a class="clear-tasks btn black" id="btn-clear" href="#">Clear Tasks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- <script> 
+    document.addEventListener("DOMContentLoaded", function () {
+        let taskInput = document.getElementById("task");
+        let taskLabel = document.querySelector("label[for='task']");
+
+        // Keep label active when input is focused
+        taskInput.addEventListener("focus", function () {
+            taskLabel.classList.add("active");
+        });
+
+        // Remove active class if input is empty when clicking outside
+        taskInput.addEventListener("blur", function () {
+            if (this.value.trim() === "") {
+                taskLabel.classList.remove("active");
+            }
+        });
+    });
+</script> -->
+<!-- <script src="./JSON.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
